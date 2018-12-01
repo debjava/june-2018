@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: Ribbon-Client
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+debitcard:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: localhost:8081,localhost:8082
+    ServerListRefreshInterval: 1000
+    
+
+creditcard:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: localhost:8091,localhost:8092
+    ServerListRefreshInterval: 1000
+    
+    
+server:
+  port: 8090
